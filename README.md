@@ -52,5 +52,14 @@ If these steps have been followed once, steps 2-4 can be skipped.
 
 ## Create argocd application
 
-1. kubectl apply -f infra/application.yaml
+#### port-forward argocr-server service
+1. kubectl port-forward svc/argocd-server -n argocd 8080:443
+#### Access the UI
+2. Go to https://localhost:8080
+#### get initial password
+3. argocd admin initial-password -n argocd
+#### Log in with user:admin and password from above
+#### Apply argocd application CRD
+4. kubectl apply -f application.yaml
+### See some synting happen, trigger it manually after mering PR
 
