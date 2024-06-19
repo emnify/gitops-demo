@@ -17,7 +17,7 @@ Steps taken from: https://argo-cd.readthedocs.io/en/stable/cli_installation/
 2. chmod +x argocd
 3. sudo mv argocd /usr/local/bin/
 
-# How to demo
+# First time setup
 
 ## Start minikube and install argocd
 
@@ -46,6 +46,11 @@ If these steps have been followed once, steps 2-4 can be skipped.
 6. eval $(minikube docker-env)
 #### Load docker image via minikube
 7. minikube image load shrimp
+#### Optional: Verify deployment
+8. kubectl apply -f infra/deployment.yaml
+9. kubectl logs -f <pod-name>
 
-## Create the application in argocd
+## Create argocd application
+
+1. kubectl apply -f infra/application.yaml
 

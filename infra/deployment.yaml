@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shrimp
+  labels:
+    app: shrimp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shrimp
+  template:
+    metadata:
+      labels:
+        app: shrimp
+    spec:
+      containers:
+        - name: shrimp
+          image: shrimp:latest
+          imagePullPolicy: Never
+          env:
+            - name: MESSAGE
+              value: "All praise the shrimp!"
