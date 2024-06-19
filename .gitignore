@@ -1,0 +1,16 @@
+logs/
+.project
+.classpath
+.*~
+*~
+*.iml
+sctpclient.log
+.idea
+.DS_Store
+*.versionsBackup
+*.aird
+GRTAGS
+GPATH
+GTAGS
+*.settings
+target/
