@@ -20,4 +20,4 @@ spec:
           imagePullPolicy: Never
           env:
             - name: MESSAGE
-              value: "All hail the shrimp!"
+              value: "All praise the shrimp!"
