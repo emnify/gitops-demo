@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: shrimp
-          image: shrimp:latest
+          image: bierabcde
           imagePullPolicy: Never
           env:
             - name: MESSAGE
