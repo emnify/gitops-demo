@@ -63,7 +63,7 @@ If these steps have been followed once, steps 2-4 can be skipped.
 4. kubectl apply -f application.yaml
 ### See some synting happen, trigger it manually after mering PR
 
-## How to Demo
+# How to Demo
 
 1. minikube start
 2. kubectl port-forward svc/argocd-server -n argocd 8080:443
