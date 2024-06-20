@@ -48,20 +48,20 @@ If these steps have been followed once, steps 2-4 can be skipped.
 7. minikube image load shrimp
 #### Optional: Verify deployment
 8. kubectl apply -f infra/deployment.yaml
-9. kubectl logs -f <pod-name>
+9. kubectl logs -f
 
 ## Create argocd application
 
-#### port-forward argocr-server service
+#### Port-forward argocd-server service
 1. kubectl port-forward svc/argocd-server -n argocd 8080:443
 #### Access the UI
 2. Go to https://localhost:8080
-#### get initial password
+#### Get initial password
 3. argocd admin initial-password -n argocd
 #### Log in with user:admin and password from above
 #### Apply argocd application CRD
 4. kubectl apply -f application.yaml
-### See some synting happen, trigger it manually after mering PR
+#### See some syncing happen, trigger it manually after mering PR
 
 # How to Demo
 
@@ -75,4 +75,3 @@ If these steps have been followed once, steps 2-4 can be skipped.
 5. In new terminal: kubectl get pods -w
 6. In argocd UI: trigger sync with prune enabled
 7. Watch the new pod come up in CLI and argocd UI.
-
