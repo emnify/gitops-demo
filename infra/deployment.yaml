@@ -5,7 +5,7 @@ metadata:
   labels:
     app: shrimp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: shrimp
