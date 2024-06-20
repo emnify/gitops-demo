@@ -68,8 +68,10 @@ If these steps have been followed once, steps 2-4 can be skipped.
 1. minikube start
 2. kubectl port-forward svc/argocd-server -n argocd 8080:443
 3. Go to http://localhost:8080
-4. Open infra/deployment.yaml
-5. Change message and push to main
+4. Create new branch
+5. Open infra/deployment.yaml
+5. Change message, push, merge PR
+6. Checkout main again and pull
 5. In new terminal: kubectl get pods -w
 6. In argocd UI: trigger sync with prune enabled
 7. Watch the new pod come up in CLI and argocd UI.
